@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zetcraft:star_ore",
+    "zetcraft:star_deepslate_ore",
+    "zetcraft:star_endstone_ore",
+    "zetcraft:star_block"
+  ]
+}

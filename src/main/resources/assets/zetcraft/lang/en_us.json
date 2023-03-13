@@ -1,0 +1,12 @@
+{
+  "item.zetcraft.zet": "Zet",
+  "item.zetcraft.star_piece": "Star Piece",
+  "item.zetcraft.thunder_rage": "Thunder Rage",
+
+  "block.zetcraft.star_ore": "Star Ore",
+  "block.zetcraft.star_deepslate_ore": "Deepslate Star Ore",
+  "block.zetcraft.star_endstone_ore": "Endstone Star Ore",
+  "block.zetcraft.star_block": "Block of Star Pieces",
+
+  "itemGroup.zetcrafttab": "ZetCraft"
+}

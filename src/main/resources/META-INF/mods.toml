@@ -29,7 +29,7 @@ displayName="ZetCraft" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="zetcraft.png" #optional
 # A text field displayed in the mod UI
-credits="w" #optional
+credits="Lots of textures by KMills (twitter: @KMills_Twitch)" #optional
 # A text field displayed in the mod UI
 authors="ZetCipher" #optional
 # The description text for the mod (multi line!) (#mandatory)
