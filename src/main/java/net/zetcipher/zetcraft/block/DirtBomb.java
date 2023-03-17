@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.block.custom;
+package net.zetcipher.zetcraft.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

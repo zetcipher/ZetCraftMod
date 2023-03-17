@@ -18,15 +18,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.zetcipher.zetcraft.ZetCraft;
-import net.zetcipher.zetcraft.item.ModItems;
-import org.lwjgl.system.CallbackI;
+import net.zetcipher.zetcraft.init.ModItems;
 
 import java.util.List;
 

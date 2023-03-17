@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.item;
+package net.zetcipher.zetcraft.init;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
+import net.zetcipher.zetcraft.item.ThunderRageItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =

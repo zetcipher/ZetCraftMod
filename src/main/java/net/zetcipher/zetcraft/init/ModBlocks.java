@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.block;
+package net.zetcipher.zetcraft.init;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,8 +11,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
-import net.zetcipher.zetcraft.item.ModCreativeModeTab;
-import net.zetcipher.zetcraft.item.ModItems;
+import net.zetcipher.zetcraft.init.ModCreativeModeTab;
+import net.zetcipher.zetcraft.init.ModItems;
 
 import java.util.function.Supplier;
 
