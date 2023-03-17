@@ -37,6 +37,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
 
+    public static final RegistryObject<Block> DIRT_BOMB = registerBlock("dirt_bomb",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(0f).explosionResistance(0f).instabreak()), ModCreativeModeTab.ZETCRAFT);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
