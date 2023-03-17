@@ -1,6 +1,5 @@
 package net.zetcipher.zetcraft.item;
 
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -8,7 +7,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
-import net.zetcipher.zetcraft.item.custom.ThunderRageItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =

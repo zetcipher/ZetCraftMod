@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.item.custom;
+package net.zetcipher.zetcraft.item;
 
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
