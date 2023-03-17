@@ -58,7 +58,7 @@ public class ThunderRageItem extends Item {
             List<Monster> enemies = getEntsInRadius(pContext.getLevel(), player, 16);
 
             for (Monster monsterIterator : enemies) {
-                monsterIterator.hurt(DamageSource.LIGHTNING_BOLT, 30);
+                monsterIterator.hurt(DamageSource.playerAttack(player).bypassArmor().setMagic(), 30);
                 if (level instanceof ServerLevel) {
                     LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
                     lightning.moveTo(Vec3.atBottomCenterOf(new BlockPos(monsterIterator.getX(), monsterIterator.getY(), monsterIterator.getZ())));
