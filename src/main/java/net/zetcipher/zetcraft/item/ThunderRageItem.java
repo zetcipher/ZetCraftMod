@@ -51,11 +51,13 @@ public class ThunderRageItem extends Item {
             Level level = pContext.getLevel();
 
             boolean success = false;
+            int entity_hit_count = 0;
 
             List<Monster> enemies = getEntsInRadius(pContext.getLevel(), player, 16);
 
             for (Monster monsterIterator : enemies) {
                 monsterIterator.hurt(DamageSource.playerAttack(player).bypassArmor().setMagic(), 30);
+                entity_hit_count ++;
                 if (level instanceof ServerLevel) {
                     LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(level);
                     lightning.moveTo(Vec3.atBottomCenterOf(new BlockPos(monsterIterator.getX(), monsterIterator.getY(), monsterIterator.getZ())));
@@ -67,7 +69,7 @@ public class ThunderRageItem extends Item {
 
             if (success) {
                 MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
-                if (_mcserv != null) {_mcserv.getPlayerList().broadcastMessage(new TextComponent((("<" + (player.getDisplayName().getString() + "> ")) + "Eat this! Thunderbolt!")), ChatType.SYSTEM, Util.NIL_UUID);}
+                if (_mcserv != null && entity_hit_count > 2) {_mcserv.getPlayerList().broadcastMessage(new TextComponent((("<" + (player.getDisplayName().getString() + "> ")) + "Eat this! Thunderbolt!")), ChatType.SYSTEM, Util.NIL_UUID);}
                 ItemStack item = new ItemStack(ModItems.THUNDER_RAGE.get());
                 if (!player.isCreative()) {
                     player.getInventory().clearOrCountMatchingItems(p -> item.getItem() == p.getItem(), 1, player.inventoryMenu.getCraftSlots());
