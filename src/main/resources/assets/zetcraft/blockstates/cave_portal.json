@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z": {"model": "zetcraft:block/cave_portal_ew"},
+    "axis=x": {"model": "zetcraft:block/cave_portal_ns"}
+  }
+}

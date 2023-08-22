@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
+import net.zetcipher.zetcraft.item.GateKey;
 import net.zetcipher.zetcraft.item.ThunderRageItem;
 
 public class ModItems {
@@ -19,6 +20,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> STAR_PIECE = ITEMS.register("star_piece",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+
+    public static final RegistryObject<Item> GATE_KEY = ITEMS.register("gate_key", GateKey::new);
 
     public static final RegistryObject<Item> PLAYER_SOUL_I = ITEMS.register("plr_soul_i",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));

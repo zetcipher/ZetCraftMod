@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
+import net.zetcipher.zetcraft.block.CavePortalBlock;
 import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 import net.zetcipher.zetcraft.init.ModItems;
 
@@ -41,11 +42,18 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(0f).explosionResistance(0f).instabreak()), ModCreativeModeTab.ZETCRAFT);
 
+    public static final RegistryObject<Block> CAVE_PORTAL_BLOCK = registerBlockWithoutBlockItem("cave_portal",
+            CavePortalBlock::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {

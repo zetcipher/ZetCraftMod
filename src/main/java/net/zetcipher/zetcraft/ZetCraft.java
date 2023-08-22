@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zetcipher.zetcraft.init.ModBlocks;
 import net.zetcipher.zetcraft.init.ModItems;
+import net.zetcipher.zetcraft.init.ModPOIs;
 import net.zetcipher.zetcraft.world.dimension.ModDimensions;
 import org.slf4j.Logger;
 
@@ -35,6 +36,8 @@ public class ZetCraft
         ModBlocks.register(eventBus);
 
         ModDimensions.register();
+
+        ModPOIs.register(eventBus);
 
         eventBus.addListener(this::setup);
 
