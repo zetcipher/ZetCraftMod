@@ -1,0 +1,15 @@
+{
+  "type": "zetcraft:deep_caverns_dimension",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -1172299215,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "minecraft:dripstone_caves",
+        "minecraft:lush_caves"
+      ]
+    }
+  }
+}
