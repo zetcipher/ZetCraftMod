@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "star_piece",
+  "ingredients": [
+    {
+      "item": "zetcraft:star_block"
+    }
+  ],
+  "result": {
+    "item": "zetcraft:star_piece",
+    "count": 9
+  }
+}
