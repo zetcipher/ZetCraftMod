@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
 import net.zetcipher.zetcraft.item.GateKeyItem;
 import net.zetcipher.zetcraft.item.ThunderRageItem;
+import net.zetcipher.zetcraft.item.wearable.WearableItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -41,10 +42,7 @@ public class ModItems {
 
     // Wearables
 
-    public static final RegistryObject<Item> RISK_RING = ITEMS.register("risk_ring",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT).stacksTo(1).rarity(Rarity.UNCOMMON)));
-
-
+    public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", (WearableItem::new));
 
 
     public static void register(IEventBus eventBus) {

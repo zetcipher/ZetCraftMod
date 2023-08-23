@@ -18,9 +18,9 @@
 
 // Wearables
   "item.zetcraft.risk_ring": "Risk Ring",
-  "tooltip.item.zetcraft.risk_ring": "Damage is doubled",
+  "tooltip.zetcraft:risk_ring": "Damage is doubled",
   "item.zetcraft.star_pendant": "Star Pendant",
-  "tooltip.zetcraft.star_pendant": "Does nothing! (For now...)",
+  "tooltip.zetcraft:star_pendant": "Strength comes from experience. That's true on any planet.",
 
 // Blocks
   "block.zetcraft.star_ore": "Star Ore",

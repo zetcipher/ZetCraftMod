@@ -1,9 +1,12 @@
 package net.zetcipher.zetcraft.item;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.ChatType;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
@@ -16,6 +19,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -28,8 +32,8 @@ import net.zetcipher.zetcraft.init.ModItems;
 import java.util.List;
 
 public class ThunderRageItem extends Item {
-    public ThunderRageItem(Properties pProperties) {
-        super(pProperties);
+    public ThunderRageItem(Properties properties) {
+        super(properties);
     }
 
     public List<Monster> getEntsInRadius(Level level, LivingEntity entity, int radius) {
@@ -40,6 +44,12 @@ public class ThunderRageItem extends Item {
     @OnlyIn(Dist.CLIENT)
     public boolean isFoil(ItemStack pStack) {
         return true;
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flags) {
+        tooltip.add(new TranslatableComponent("tooltip.zetcraft.thunder_rage").withStyle(ChatFormatting.GRAY));
     }
 
     @Override

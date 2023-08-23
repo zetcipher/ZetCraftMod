@@ -1,18 +1,27 @@
 package net.zetcipher.zetcraft.item;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.zetcipher.zetcraft.block.CavePortalBlock;
 import net.zetcipher.zetcraft.init.ModBlocks;
 import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 import net.zetcipher.zetcraft.world.dimension.ModDimensions;
+
+import java.util.List;
 
 public class GateKeyItem extends Item {
     public GateKeyItem() {
@@ -35,5 +44,11 @@ public class GateKeyItem extends Item {
             }
         }
         return InteractionResult.FAIL;
+    }
+
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flags) {
+        tooltip.add(new TranslatableComponent("tooltip.zetcraft.gate_key").withStyle(ChatFormatting.GRAY));
     }
 }

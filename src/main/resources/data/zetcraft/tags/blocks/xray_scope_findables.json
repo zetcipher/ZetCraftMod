@@ -11,7 +11,7 @@
     "minecraft:lapis_ore",
     "minecraft:emerald_ore",
     "minecraft:copper_ore",
-    "zetcraft:deepslate_star_ore",
+    "zetcraft:star_deepslate_ore",
     "minecraft:deepslate_coal_ore",
     "minecraft:deepslate_iron_ore",
     "minecraft:deepslate_copper_ore",
@@ -21,6 +21,6 @@
     "minecraft:deepslate_diamond_ore",
     "minecraft:deepslate_emerald_ore",
     "minecraft:deepslate_copper_ore",
-    "zetcraft:endstone_star_ore"
+    "zetcraft:star_endstone_ore"
   ]
 }
