@@ -6,10 +6,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zetcipher.zetcraft.config.ZetCraftClientConfigs;
 import net.zetcipher.zetcraft.config.ZetCraftCommonConfigs;
@@ -18,6 +20,9 @@ import net.zetcipher.zetcraft.init.ModItems;
 import net.zetcipher.zetcraft.init.ModPOIs;
 import net.zetcipher.zetcraft.world.dimension.ModDimensions;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotTypeMessage;
+import top.theillusivec4.curios.api.SlotTypePreset;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ZetCraft.MOD_ID)
@@ -43,6 +48,8 @@ public class ZetCraft
 
         ModPOIs.register(eventBus);
 
+        eventBus.addListener(this::enqueueIMC);
+
         eventBus.addListener(this::setup);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ZetCraftClientConfigs.SPEC, "zetcraft-client.toml");
@@ -57,5 +64,12 @@ public class ZetCraft
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+
+    public void enqueueIMC(final InterModEnqueueEvent event) {
+        SlotTypePreset[] types = {SlotTypePreset.RING, SlotTypePreset.NECKLACE};
+        for (SlotTypePreset type : types) {
+            InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> type.getMessageBuilder().build());
+        }
     }
 }
