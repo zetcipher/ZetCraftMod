@@ -14,8 +14,8 @@ import net.zetcipher.zetcraft.init.ModBlocks;
 import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 import net.zetcipher.zetcraft.world.dimension.ModDimensions;
 
-public class GateKey extends Item {
-    public GateKey() {
+public class GateKeyItem extends Item {
+    public GateKeyItem() {
         super(new Properties()
                 .tab(ModCreativeModeTab.ZETCRAFT)
                 .stacksTo(1)

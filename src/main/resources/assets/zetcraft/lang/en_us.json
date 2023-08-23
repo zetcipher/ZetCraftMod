@@ -1,17 +1,34 @@
 {
+
+// Generic Items
   "item.zetcraft.zet": "Zet",
   "item.zetcraft.star_piece": "Star Piece",
-  "item.zetcraft.gate_key": "Gate Key",
   "item.zetcraft.plr_soul_i": "Lesser Soul Sphere",
   "item.zetcraft.plr_soul_ii": "Soul Sphere",
   "item.zetcraft.plr_soul_iii": "Greater Soul Sphere",
-  "item.zetcraft.thunder_rage": "Thunder Rage",
+  "tooltip.zetcraft.plr_soul_i": "It's a bit of you! I think...",
+  "tooltip.zetcraft.plr_soul_ii": "For what profit is it to a man...",
+  "tooltip.zetcraft.plr_soul_iii": "It's actually just XP, don't worry.",
 
+// Special Items
+  "item.zetcraft.thunder_rage": "Thunder Rage",
+  "tooltip.zetcraft.thunder_rage": "Use on the ground to annihilate nearby enemies",
+  "item.zetcraft.gate_key": "Gate Key",
+  "tooltip.zetcraft.gate_key": "Opens up portals to places that shouldn't need them",
+
+// Wearables
+  "item.zetcraft.risk_ring": "Risk Ring",
+  "tooltip.item.zetcraft.risk_ring": "Damage is doubled",
+  "item.zetcraft.star_pendant": "Star Pendant",
+  "tooltip.zetcraft.star_pendant": "Does nothing! (For now...)",
+
+// Blocks
   "block.zetcraft.star_ore": "Star Ore",
   "block.zetcraft.star_deepslate_ore": "Deepslate Star Ore",
   "block.zetcraft.star_endstone_ore": "Endstone Star Ore",
   "block.zetcraft.star_block": "Block of Star Pieces",
   "block.zetcraft.dirt_bomb": "Dirt Bomb",
 
+// Creative Mode Tabs
   "itemGroup.zetcrafttab": "ZetCraft"
 }

@@ -7,7 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
-import net.zetcipher.zetcraft.item.GateKey;
+import net.zetcipher.zetcraft.item.GateKeyItem;
 import net.zetcipher.zetcraft.item.ThunderRageItem;
 
 public class ModItems {
@@ -21,8 +21,6 @@ public class ModItems {
     public static final RegistryObject<Item> STAR_PIECE = ITEMS.register("star_piece",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
 
-    public static final RegistryObject<Item> GATE_KEY = ITEMS.register("gate_key", GateKey::new);
-
     public static final RegistryObject<Item> PLAYER_SOUL_I = ITEMS.register("plr_soul_i",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
 
@@ -32,8 +30,19 @@ public class ModItems {
     public static final RegistryObject<Item> PLAYER_SOUL_III = ITEMS.register("plr_soul_iii",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
 
+
+    // Special
+
     public static final RegistryObject<ThunderRageItem> THUNDER_RAGE = ITEMS.register("thunder_rage",
             () -> new ThunderRageItem(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT).stacksTo(1).rarity(Rarity.UNCOMMON)));
+
+    public static final RegistryObject<Item> GATE_KEY = ITEMS.register("gate_key", GateKeyItem::new);
+
+
+    // Wearables
+
+    public static final RegistryObject<Item> RISK_RING = ITEMS.register("risk_ring",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT).stacksTo(1).rarity(Rarity.UNCOMMON)));
 
 
 
