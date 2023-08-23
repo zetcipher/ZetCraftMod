@@ -45,6 +45,12 @@ public class ModItems {
 
     public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", (WearableItem::new));
     public static final RegistryObject<WearableItem> STAR_PENDANT = ITEMS.register("star_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> LAPIS_PENDANT = ITEMS.register("lapis_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> AMETHYST_PENDANT = ITEMS.register("amethyst_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> DIAMOND_PENDANT = ITEMS.register("diamond_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> EMERALD_PENDANT = ITEMS.register("emerald_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> QUARTZ_PENDANT = ITEMS.register("nether_quartz_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> ENDER_PENDANT = ITEMS.register("ender_pearl_pendant", (WearableItem::new));
 
 
     public static void register(IEventBus eventBus) {

@@ -22,16 +22,16 @@ public class ModLivingHurtEvent {
 
             Player player = (Player) ev.getSource().getEntity();
 
-            if (isPlayerWearingCurio(player, ModItems.STAR_PENDANT.get())) {
+            // Commented out because I need to add a different item to grant this effect.
+            /*if (isPlayerWearingCurio(player, ModItems.STAR_PENDANT.get())) {
                 float expDmgBonus = player.experienceLevel;
                 expDmgBonus *= 0.1f;
                 if (expDmgBonus > 30.0f) {expDmgBonus = 30.0f;}
                 newDamage += expDmgBonus;
-            }
+            }*/
 
-            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) {
-                newDamage *= 2.0f;
-            }
+            // This should always be the last damage modification done (at least in this mod)
+            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) { newDamage *= 2.0f; } // Doubling damage if Risk Ring is equipped. (Yes it happens on both ends, that's the point.)
 
         }
 
@@ -40,13 +40,16 @@ public class ModLivingHurtEvent {
         if (ev.getEntityLiving() instanceof Player) {
             Player player = (Player) ev.getEntityLiving();
 
-            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) {
-                newDamage *= 2.0f;
-            }
+            // TODO: Implement dodge chance (Maybe should be in different event?)
+
+            // This should always be the last damage modification done (at least in this mod)
+            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) { newDamage *= 2.0f; } // Doubling damage if Risk Ring is equipped. (Yes it happens on both ends, that's the point.)
 
         }
 
-        if (newDamage != ev.getAmount()) { ev.setAmount(newDamage); }
+
+        if (newDamage < 0.5f) { newDamage = 0.5f; } // Setting minimum damage value. TODO: Make this value configurable
+        if (newDamage != ev.getAmount()) { ev.setAmount(newDamage); } // Setting new damage value.
     }
 
     public static boolean isPlayerWearingCurio (Player player, Item item) {

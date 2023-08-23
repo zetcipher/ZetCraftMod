@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "zetcraft:star_pendant"
+    "zetcraft:star_pendant",
+    "zetcraft:lapis_pendant",
+    "zetcraft:amethyst_pendant",
+    "zetcraft:diamond_pendant",
+    "zetcraft:emerald_pendant",
+    "zetcraft:nether_quartz_pendant",
+    "zetcraft:ender_pearl_pendant"
   ]
 }
