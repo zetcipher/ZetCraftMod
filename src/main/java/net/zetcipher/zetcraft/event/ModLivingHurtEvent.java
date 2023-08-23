@@ -22,6 +22,13 @@ public class ModLivingHurtEvent {
 
             Player player = (Player) ev.getSource().getEntity();
 
+            if (isPlayerWearingCurio(player, ModItems.STAR_PENDANT.get())) {
+                float expDmgBonus = player.experienceLevel;
+                expDmgBonus *= 0.1f;
+                if (expDmgBonus > 30.0f) {expDmgBonus = 30.0f;}
+                newDamage += expDmgBonus;
+            }
+
             if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) {
                 newDamage *= 2.0f;
             }

@@ -20,7 +20,7 @@
   "item.zetcraft.risk_ring": "Risk Ring",
   "tooltip.zetcraft:risk_ring": "Damage is doubled",
   "item.zetcraft.star_pendant": "Star Pendant",
-  "tooltip.zetcraft:star_pendant": "Strength comes from experience. That's true on any planet.",
+  "tooltip.zetcraft:star_pendant": "Increases damage dealt by 0.1 per level of experience. (+30 max)\nStrength comes from experience. That's true on any planet.",
 
 // Blocks
   "block.zetcraft.star_ore": "Star Ore",

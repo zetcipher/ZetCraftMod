@@ -41,8 +41,10 @@ public class ModItems {
 
 
     // Wearables
+    // Any equip that has a conditional/variable damage bonus (including risk ring) is handled in net.zetcipher.event.ModLivingHurtEvent
 
     public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", (WearableItem::new));
+    public static final RegistryObject<WearableItem> STAR_PENDANT = ITEMS.register("star_pendant", (WearableItem::new));
 
 
     public static void register(IEventBus eventBus) {
