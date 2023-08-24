@@ -15,6 +15,8 @@ public class ModLivingHurtEvent {
     @SubscribeEvent
     public static void onEntityAttacked(LivingHurtEvent ev) {
         float newDamage = ev.getAmount();
+        int attRiskRingCount = 0;
+        int defRiskRingCount = 0;
 
 
         // Execute code for when player is attacking
@@ -31,7 +33,8 @@ public class ModLivingHurtEvent {
             }*/
 
             // This should always be the last damage modification done (at least in this mod)
-            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) { newDamage *= 2.0f; } // Doubling damage if Risk Ring is equipped. (Yes it happens on both ends, that's the point.)
+            attRiskRingCount = getPlayerCurioCount(player, ModItems.RISK_RING.get());
+            if (attRiskRingCount > 0) { newDamage *= 2.0f * attRiskRingCount; } // Doubling damage for each equipped Risk Ring. (Yes it happens on both ends, that's the point.)
 
         }
 
@@ -43,7 +46,8 @@ public class ModLivingHurtEvent {
             // TODO: Implement dodge chance (Maybe should be in different event?)
 
             // This should always be the last damage modification done (at least in this mod)
-            if (isPlayerWearingCurio(player, ModItems.RISK_RING.get())) { newDamage *= 2.0f; } // Doubling damage if Risk Ring is equipped. (Yes it happens on both ends, that's the point.)
+            defRiskRingCount = getPlayerCurioCount(player, ModItems.RISK_RING.get());
+            if (defRiskRingCount > 0) { newDamage *= 2.0f * defRiskRingCount; } // Doubling damage for each equipped Risk Ring. (Yes it happens on both ends, that's the point.)
 
         }
 
@@ -55,5 +59,10 @@ public class ModLivingHurtEvent {
     public static boolean isPlayerWearingCurio (Player player, Item item) {
         ICuriosHelper curiosHelper = CuriosApi.getCuriosHelper();
         return curiosHelper.findFirstCurio(player, item).isPresent();
+    }
+
+    public static int getPlayerCurioCount (Player player, Item item) {
+        ICuriosHelper curiosHelper = CuriosApi.getCuriosHelper();
+        return curiosHelper.findCurios(player, item).size();
     }
 }
