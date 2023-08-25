@@ -19,6 +19,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
@@ -27,13 +28,18 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.server.ServerLifecycleHooks;
 import net.zetcipher.zetcraft.ZetCraft;
+import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 import net.zetcipher.zetcraft.init.ModItems;
 
 import java.util.List;
 
 public class ThunderRageItem extends Item {
     public ThunderRageItem(Properties properties) {
-        super(properties);
+        super(properties.tab(ModCreativeModeTab.ZETCRAFT).stacksTo(1).rarity(Rarity.UNCOMMON));
+    }
+
+    public ThunderRageItem() {
+        this(new Properties());
     }
 
     public List<Monster> getEntsInRadius(Level level, LivingEntity entity, int radius) {
@@ -49,7 +55,7 @@ public class ThunderRageItem extends Item {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flags) {
-        tooltip.add(new TranslatableComponent("tooltip.zetcraft.thunder_rage").withStyle(ChatFormatting.GRAY));
+        tooltip.add(new TranslatableComponent("tooltip.zetcraft:thunder_rage").withStyle(ChatFormatting.GRAY));
     }
 
     @Override

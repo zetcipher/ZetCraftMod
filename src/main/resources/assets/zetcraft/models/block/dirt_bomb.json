@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
-    "top": "zetcraft:block/dir_bomb_top",
-    "bottom": "zetcraft:block/dir_bomb_bottom",
-    "side": "zetcraft:block/dir_bomb_side"
+    "top": "zetcraft:block/dirt_bomb_top",
+    "bottom": "zetcraft:block/dirt_bomb_bottom",
+    "side": "zetcraft:block/dirt_bomb_side"
   }
 }

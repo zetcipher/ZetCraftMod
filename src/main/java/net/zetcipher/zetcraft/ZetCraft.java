@@ -67,7 +67,7 @@ public class ZetCraft
     }
 
     public void enqueueIMC(final InterModEnqueueEvent event) {
-        SlotTypePreset[] types = {SlotTypePreset.RING, SlotTypePreset.NECKLACE};
+        SlotTypePreset[] types = {SlotTypePreset.RING, SlotTypePreset.NECKLACE, SlotTypePreset.CHARM};
         for (SlotTypePreset type : types) {
             InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> type.getMessageBuilder().build());
         }

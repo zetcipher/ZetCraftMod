@@ -250,16 +250,17 @@ public class CavePortalBlock extends Block{
 
         protected int getDistanceUntilEdge(BlockPos pos, Direction directionIn) {
             int i;
+            Block frameBlock = Blocks.OBSIDIAN;
             for(i = 0; i < 22; ++i) {
                 BlockPos blockpos = pos.relative(directionIn, i);
                 if(!this.canConnect(this.level.getBlockState(blockpos)) ||
-                        !(this.level.getBlockState(blockpos.below()).is(ModTags.Blocks.CAVEPORTAL_FRAME))) {
+                        !(this.level.getBlockState(blockpos.below()).is(frameBlock))) {
                     break;
                 }
             }
 
             BlockPos framePos = pos.relative(directionIn, i);
-            return this.level.getBlockState(framePos).is(ModTags.Blocks.CAVEPORTAL_FRAME) ? i : 0;
+            return this.level.getBlockState(framePos).is(frameBlock) ? i : 0;
         }
 
         public int getHeight() {
@@ -271,6 +272,7 @@ public class CavePortalBlock extends Block{
         }
 
         protected int calculatePortalHeight() {
+            Block frameBlock = Blocks.OBSIDIAN;
             label56:
             for(this.height = 0; this.height < 21; ++this.height) {
                 for(int i = 0; i < this.width; ++i) {
@@ -287,12 +289,12 @@ public class CavePortalBlock extends Block{
 
                     if (i == 0) {
                         BlockPos framePos = blockpos.relative(this.leftDir);
-                        if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.CAVEPORTAL_FRAME))) {
+                        if (!(this.level.getBlockState(framePos).is(frameBlock))) {
                             break label56;
                         }
                     } else if (i == this.width - 1) {
                         BlockPos framePos = blockpos.relative(this.rightDir);
-                        if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.CAVEPORTAL_FRAME))) {
+                        if (!(this.level.getBlockState(framePos).is(frameBlock))) {
                             break label56;
                         }
                     }
@@ -301,7 +303,7 @@ public class CavePortalBlock extends Block{
 
             for(int j = 0; j < this.width; ++j) {
                 BlockPos framePos = this.bottomLeft.relative(this.rightDir, j).above(this.height);
-                if (!(this.level.getBlockState(framePos).is(ModTags.Blocks.CAVEPORTAL_FRAME))) {
+                if (!(this.level.getBlockState(framePos).is(frameBlock))) {
                     this.height = 0;
                     break;
                 }

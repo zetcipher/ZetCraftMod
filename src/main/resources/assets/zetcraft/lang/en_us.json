@@ -10,15 +10,23 @@
   "tooltip.zetcraft.plr_soul_ii": "For what profit is it to a man...",
   "tooltip.zetcraft.plr_soul_iii": "It's actually just XP, don't worry.",
 
+
 // Special Items
   "item.zetcraft.thunder_rage": "Thunder Rage",
-  "tooltip.zetcraft.thunder_rage": "Use on the ground to annihilate nearby enemies",
+  "tooltip.zetcraft:thunder_rage": "Use on the ground to annihilate nearby enemies",
   "item.zetcraft.gate_key": "Gate Key",
-  "tooltip.zetcraft.gate_key": "Opens up portals to places that shouldn't need them",
+  "tooltip.zetcraft:gate_key": "Used to open portals",
+
 
 // Wearables
   "item.zetcraft.risk_ring": "Risk Ring",
-  "tooltip.zetcraft:risk_ring": "Damage is doubled",
+  "tooltip.zetcraft:risk_ring": "Damage is doubled [Stackable]",
+
+  "item.zetcraft.power_rush": "Power Rush",
+  "tooltip.zetcraft:power_rush": "Increases damage dealt by 4 when in danger",
+  "item.zetcraft.last_stand": "Last Stand",
+  "tooltip.zetcraft:last_stand": "Cuts damage taken by half when in danger",
+
   "item.zetcraft.star_pendant": "Star Pendant",
   "tooltip.zetcraft:star_pendant": "Increases crit chance by 10%",
   "item.zetcraft.lapis_pendant": "Lapis Pendant",
@@ -28,11 +36,12 @@
   "item.zetcraft.diamond_pendant": "Diamond Pendant",
   "tooltip.zetcraft:diamond_pendant": "Increases defense by 4",
   "item.zetcraft.emerald_pendant": "Emerald Pendant",
-  "tooltip.zetcraft:emerald_pendant": "Grants a 5% chance to get an emerald on kill",
+  "tooltip.zetcraft:emerald_pendant": "Grants a 10% chance to get an emerald on kill",
   "item.zetcraft.nether_quartz_pendant": "Nether Quartz Pendant",
   "tooltip.zetcraft:nether_quartz_pendant": "Increases damage dealt by 2",
   "item.zetcraft.ender_pearl_pendant": "Ender Pearl Pendant",
   "tooltip.zetcraft:ender_pearl_pendant": "Provides a 10% chance to dodge an attack",
+
 
 // Blocks
   "block.zetcraft.star_ore": "Star Ore",
@@ -41,6 +50,16 @@
   "block.zetcraft.star_block": "Block of Star Pieces",
   "block.zetcraft.dirt_bomb": "Dirt Bomb",
 
+
 // Creative Mode Tabs
-  "itemGroup.zetcrafttab": "ZetCraft"
+  "itemGroup.zetcrafttab": "ZetCraft",
+
+// Other
+  "info.zetcraft.danger_condition": "When in danger: ",
+  "info.zetcraft.damage_dealt_all": "damage dealt",
+  "info.zetcraft.damage_dealt_melee": "melee damage",
+  "info.zetcraft.damage_dealt_ranged": "ranged damage",
+  "info.zetcraft.damage_taken_all": "damage dealt",
+  "info.zetcraft.damage_taken_melee": "melee damage",
+  "info.zetcraft.damage_taken_ranged": "ranged damage"
 }

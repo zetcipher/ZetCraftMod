@@ -34,23 +34,25 @@ public class ModItems {
 
     // Special
 
-    public static final RegistryObject<ThunderRageItem> THUNDER_RAGE = ITEMS.register("thunder_rage",
-            () -> new ThunderRageItem(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT).stacksTo(1).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<ThunderRageItem> THUNDER_RAGE = ITEMS.register("thunder_rage", ThunderRageItem::new);
 
     public static final RegistryObject<Item> GATE_KEY = ITEMS.register("gate_key", GateKeyItem::new);
 
 
     // Wearables
-    // Any equip that has a conditional/variable damage bonus (including risk ring) is handled in net.zetcipher.event.ModLivingHurtEvent
+    // Any equip that has a conditional/variable damage bonus/modifier (including risk ring, power rush, and last stand) is a WearableItem, and its effects are handled in net.zetcipher.event.CombatEventHandler
 
-    public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", (WearableItem::new));
-    public static final RegistryObject<WearableItem> STAR_PENDANT = ITEMS.register("star_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> LAPIS_PENDANT = ITEMS.register("lapis_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> AMETHYST_PENDANT = ITEMS.register("amethyst_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> DIAMOND_PENDANT = ITEMS.register("diamond_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> EMERALD_PENDANT = ITEMS.register("emerald_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> QUARTZ_PENDANT = ITEMS.register("nether_quartz_pendant", (WearableItem::new));
-    public static final RegistryObject<WearableItem> ENDER_PENDANT = ITEMS.register("ender_pearl_pendant", (WearableItem::new));
+    public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", WearableItem::new);
+    public static final RegistryObject<WearableItem> STAR_PENDANT = ITEMS.register("star_pendant", WearableItem::new);
+    public static final RegistryObject<WearableItem> LAPIS_PENDANT = ITEMS.register("lapis_pendant", WearableItem::new); // TODO: Move to own class
+    public static final RegistryObject<WearableItem> AMETHYST_PENDANT = ITEMS.register("amethyst_pendant", WearableItem::new);
+    public static final RegistryObject<WearableItem> DIAMOND_PENDANT = ITEMS.register("diamond_pendant", WearableItem::new); // TODO: Move to own class
+    public static final RegistryObject<WearableItem> EMERALD_PENDANT = ITEMS.register("emerald_pendant", WearableItem::new);
+    public static final RegistryObject<WearableItem> QUARTZ_PENDANT = ITEMS.register("nether_quartz_pendant", WearableItem::new); // TODO: Move to own class
+    public static final RegistryObject<WearableItem> ENDER_PENDANT = ITEMS.register("ender_pearl_pendant", WearableItem::new);
+
+    public static final RegistryObject<WearableItem> POWER_RUSH = ITEMS.register("power_rush", WearableItem::new);
+    public static final RegistryObject<WearableItem> LAST_STAND = ITEMS.register("last_stand", WearableItem::new);
 
 
     public static void register(IEventBus eventBus) {
