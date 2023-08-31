@@ -60,7 +60,7 @@ public class CombatEventHandler {
 
             if (entityInDanger(defender) && defLastStandCount > 0) {
                 for (int i = 0; i < defLastStandCount; i++){
-                    damage *= ZCServerConfig.LAST_STAND_DMG_MOD.get();
+                    damage -= damage * ZCServerConfig.LAST_STAND_DMG_MOD.get();
                 }
             } // Multiplying damage by the last stand damage mod if defender is in danger
         }

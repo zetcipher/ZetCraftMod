@@ -50,8 +50,8 @@ public class ZCServerConfig {
                 .define("Power Rush Damage Bonus", 4.0f);
         BUILDER.comment("\n");
 
-        LAST_STAND_DMG_MOD = BUILDER.comment("The value the damage a player receives will be multiplied by if wearing the Last Stand badge while their health is below the danger threshold. (Default: 0.5)")
-                .define("Last Stand Damage Multiplier", 0.5f);
+        LAST_STAND_DMG_MOD = BUILDER.comment("Damage taken will be reduced by this amount as a percentage for each Last Stand badge equipped while in danger. (Default: 0.33)")
+                .define("Last Stand Damage Multiplier", 0.33f);
         BUILDER.comment("\n");
 
         BASE_CRIT_CHANCE = BUILDER.comment("The Player's base critical hit chance (0.05 = 5%). (Default: 0.05)")
