@@ -38,11 +38,11 @@ public class ZCServerConfig {
         BUILDER.comment("Combat & Related Equips");
         BUILDER.comment("\n");
 
-        MIN_DAMAGE = BUILDER.comment("The minimum damage that will be dealt to an entity on a LivingHurtEvent in half hearts (Default: 0.5)")
+        MIN_DAMAGE = BUILDER.comment("The minimum damage that will be dealt to an entity when hurt in half hearts (Default: 0.5)")
                 .define("Minimum Damage Value", 0.5f);
         BUILDER.comment("\n");
 
-        DANGER_THRESHOLD = BUILDER.comment("The maximum health value in half hearts a player can have and still be considered \"in danger\". (Default: 10.0)")
+        DANGER_THRESHOLD = BUILDER.comment("Without any other equips, the player must have this much health (in half hearts) or less to be considered \"in danger\". (Default: 10.0)")
                 .define("Danger Status Threshold", 10.0f);
         BUILDER.comment("\n");
 
