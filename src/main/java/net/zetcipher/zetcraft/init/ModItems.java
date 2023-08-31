@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.zetcipher.zetcraft.ZetCraft;
 import net.zetcipher.zetcraft.item.GateKeyItem;
 import net.zetcipher.zetcraft.item.ThunderRageItem;
-import net.zetcipher.zetcraft.item.wearable.WearableItem;
+import net.zetcipher.zetcraft.item.wearable.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -18,16 +18,24 @@ public class ModItems {
 
     public static final RegistryObject<Item> ZET = ITEMS.register("zet",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
-
     public static final RegistryObject<Item> STAR_PIECE = ITEMS.register("star_piece",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
-
+    public static final RegistryObject<Item> RAW_X = ITEMS.register("raw_x",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+    public static final RegistryObject<Item> RAW_Y = ITEMS.register("raw_y",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+    public static final RegistryObject<Item> RAW_Z = ITEMS.register("raw_z",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+    public static final RegistryObject<Item> X_INGOT = ITEMS.register("x_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+    public static final RegistryObject<Item> Y_INGOT = ITEMS.register("y_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
+    public static final RegistryObject<Item> Z_INGOT = ITEMS.register("z_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
     public static final RegistryObject<Item> PLAYER_SOUL_I = ITEMS.register("plr_soul_i",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
-
     public static final RegistryObject<Item> PLAYER_SOUL_II = ITEMS.register("plr_soul_ii",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
-
     public static final RegistryObject<Item> PLAYER_SOUL_III = ITEMS.register("plr_soul_iii",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ZETCRAFT)));
 
@@ -35,24 +43,23 @@ public class ModItems {
     // Special
 
     public static final RegistryObject<ThunderRageItem> THUNDER_RAGE = ITEMS.register("thunder_rage", ThunderRageItem::new);
-
     public static final RegistryObject<Item> GATE_KEY = ITEMS.register("gate_key", GateKeyItem::new);
 
 
     // Wearables
-    // Any equip that has a conditional/variable damage bonus/modifier (including risk ring, power rush, and last stand) is a WearableItem, and its effects are handled in net.zetcipher.event.CombatEventHandler
+    // Generic wearables (i.e. those that don't have configurable bonuses, or don't list specific values) come from the WearableItem class.
 
     public static final RegistryObject<WearableItem> RISK_RING = ITEMS.register("risk_ring", WearableItem::new);
-    public static final RegistryObject<WearableItem> STAR_PENDANT = ITEMS.register("star_pendant", WearableItem::new);
-    public static final RegistryObject<WearableItem> LAPIS_PENDANT = ITEMS.register("lapis_pendant", WearableItem::new); // TODO: Move to own class
+    public static final RegistryObject<StarPendantItem> STAR_PENDANT = ITEMS.register("star_pendant", StarPendantItem::new);
+    public static final RegistryObject<LapisPendantItem> LAPIS_PENDANT = ITEMS.register("lapis_pendant", LapisPendantItem::new);
     public static final RegistryObject<WearableItem> AMETHYST_PENDANT = ITEMS.register("amethyst_pendant", WearableItem::new);
-    public static final RegistryObject<WearableItem> DIAMOND_PENDANT = ITEMS.register("diamond_pendant", WearableItem::new); // TODO: Move to own class
+    public static final RegistryObject<WearableItem> DIAMOND_PENDANT = ITEMS.register("diamond_pendant", WearableItem::new);
     public static final RegistryObject<WearableItem> EMERALD_PENDANT = ITEMS.register("emerald_pendant", WearableItem::new);
-    public static final RegistryObject<WearableItem> QUARTZ_PENDANT = ITEMS.register("nether_quartz_pendant", WearableItem::new); // TODO: Move to own class
-    public static final RegistryObject<WearableItem> ENDER_PENDANT = ITEMS.register("ender_pearl_pendant", WearableItem::new);
+    public static final RegistryObject<WearableItem> QUARTZ_PENDANT = ITEMS.register("nether_quartz_pendant", WearableItem::new);
+    public static final RegistryObject<EnderPearlPendantItem> ENDER_PENDANT = ITEMS.register("ender_pearl_pendant", EnderPearlPendantItem::new);
 
-    public static final RegistryObject<WearableItem> POWER_RUSH = ITEMS.register("power_rush", WearableItem::new);
-    public static final RegistryObject<WearableItem> LAST_STAND = ITEMS.register("last_stand", WearableItem::new);
+    public static final RegistryObject<PowerRushItem> POWER_RUSH = ITEMS.register("power_rush", PowerRushItem::new);
+    public static final RegistryObject<LastStandItem> LAST_STAND = ITEMS.register("last_stand", LastStandItem::new);
 
 
     public static void register(IEventBus eventBus) {

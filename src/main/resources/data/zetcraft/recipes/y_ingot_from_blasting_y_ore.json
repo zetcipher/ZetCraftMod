@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "y_ingot",
+  "ingredient": {
+    "item": "zetcraft:y_ore"
+  },
+  "result": "zetcraft:y_ingot",
+  "experience": 1,
+  "cookingtime": 100
+}

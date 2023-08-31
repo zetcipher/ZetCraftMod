@@ -35,8 +35,32 @@ public class ModBlocks {
                     .strength(4.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
 
     public static final RegistryObject<Block> STAR_BLOCK = registerBlock("star_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> X_BLOCK = registerBlock("x_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> Y_BLOCK = registerBlock("y_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> Z_BLOCK = registerBlock("z_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> X_ORE = registerBlock("x_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> Y_ORE = registerBlock("y_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
+
+    public static final RegistryObject<Block> Z_ORE = registerBlock("z_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ZETCRAFT);
 
     public static final RegistryObject<Block> DIRT_BOMB = registerBlock("dirt_bomb",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)

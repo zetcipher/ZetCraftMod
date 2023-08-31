@@ -3,7 +3,7 @@
   "generator": {
     "type": "minecraft:noise",
     "seed": 1041611473,
-    "settings": "zetcraft:cavedim_noise5",
+    "settings": "zetcraft:cavedim_noise9",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "preset": "minecraft:overworld"

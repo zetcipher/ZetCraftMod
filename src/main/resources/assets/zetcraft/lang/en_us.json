@@ -3,12 +3,18 @@
 // Generic Items
   "item.zetcraft.zet": "Zet",
   "item.zetcraft.star_piece": "Star Piece",
+  "item.zetcraft.raw_x": "Raw X-ite",
+  "item.zetcraft.raw_y": "Raw Y-odine",
+  "item.zetcraft.raw_z": "Raw Z-nium",
+  "item.zetcraft.x_ingot": "X-ite Ingot",
+  "item.zetcraft.y_ingot": "Y-odine Ingot",
+  "item.zetcraft.z_ingot": "Z-nium Ingot",
   "item.zetcraft.plr_soul_i": "Lesser Soul Sphere",
   "item.zetcraft.plr_soul_ii": "Soul Sphere",
   "item.zetcraft.plr_soul_iii": "Greater Soul Sphere",
-  "tooltip.zetcraft.plr_soul_i": "It's a bit of you! I think...",
-  "tooltip.zetcraft.plr_soul_ii": "For what profit is it to a man...",
-  "tooltip.zetcraft.plr_soul_iii": "It's actually just XP, don't worry.",
+  "tooltip.zetcraft.plr_soul_i": "The more you take, the less there is...",
+  "tooltip.zetcraft.plr_soul_ii": "The more you take, the less there is...",
+  "tooltip.zetcraft.plr_soul_iii": "The more you take, the less there is...",
 
 
 // Special Items
@@ -28,19 +34,22 @@
   "tooltip.zetcraft:last_stand": "Cuts damage taken by half when in danger",
 
   "item.zetcraft.star_pendant": "Star Pendant",
-  "tooltip.zetcraft:star_pendant": "Increases crit chance by 10%",
+  "tooltip.zetcraft:star_pendant": "Strength comes from experience. That's true on any planet.",
   "item.zetcraft.lapis_pendant": "Lapis Pendant",
-  "tooltip.zetcraft:lapis_pendant": "Increases luck by 1",
+  "tooltip.zetcraft:lapis_pendant": "Increases luck by 2",
   "item.zetcraft.amethyst_pendant": "Amethyst Pendant",
-  "tooltip.zetcraft:amethyst_pendant": "Slain mobs drop 25% more experience",
+  "tooltip.zetcraft:amethyst_pendant": "Slain mobs drop %s more experience",
   "item.zetcraft.diamond_pendant": "Diamond Pendant",
-  "tooltip.zetcraft:diamond_pendant": "Increases defense by 4",
+  "tooltip.zetcraft:diamond_pendant": "Reduces damage taken by 1",
   "item.zetcraft.emerald_pendant": "Emerald Pendant",
   "tooltip.zetcraft:emerald_pendant": "Grants a 10% chance to get an emerald on kill",
   "item.zetcraft.nether_quartz_pendant": "Nether Quartz Pendant",
-  "tooltip.zetcraft:nether_quartz_pendant": "Increases damage dealt by 2",
+  "tooltip.zetcraft:nether_quartz_pendant": "+0.05 damage dealt per level",
   "item.zetcraft.ender_pearl_pendant": "Ender Pearl Pendant",
-  "tooltip.zetcraft:ender_pearl_pendant": "Provides a 10% chance to dodge an attack",
+  "tooltip.zetcraft:ender_pearl_pendant": "I feel nothing",
+
+  "item.zetcraft.hunger_blocker": "Hunger Blocker",
+  "tooltip.zetcraft:hunger_blocker": "Immune to Hunger status",
 
 
 // Blocks
@@ -48,18 +57,38 @@
   "block.zetcraft.star_deepslate_ore": "Deepslate Star Ore",
   "block.zetcraft.star_endstone_ore": "Endstone Star Ore",
   "block.zetcraft.star_block": "Block of Star Pieces",
+  "block.zetcraft.x_ore": "X-ite Ore",
+  "block.zetcraft.y_ore": "Y-odine Ore",
+  "block.zetcraft.z_ore": "Z-nium Ore",
+  "block.zetcraft.x_block": "X-ite Block",
+  "block.zetcraft.y_block": "Y-odine Block",
+  "block.zetcraft.z_block": "Z-nium Block",
   "block.zetcraft.dirt_bomb": "Dirt Bomb",
+  "block.zetcraft.essence_table": "Essence Table",
 
 
 // Creative Mode Tabs
   "itemGroup.zetcrafttab": "ZetCraft",
+  "itemGroup.zetcraftequips": "ZetCraft Equips",
 
 // Other
   "info.zetcraft.danger_condition": "When in danger: ",
-  "info.zetcraft.damage_dealt_all": "damage dealt",
-  "info.zetcraft.damage_dealt_melee": "melee damage",
-  "info.zetcraft.damage_dealt_ranged": "ranged damage",
-  "info.zetcraft.damage_taken_all": "damage dealt",
-  "info.zetcraft.damage_taken_melee": "melee damage",
-  "info.zetcraft.damage_taken_ranged": "ranged damage"
+  "info.zetcraft.damage_dealt_all": "+%s damage dealt",
+  "info.zetcraft.damage_dealt_melee": "+%s melee damage",
+  "info.zetcraft.damage_dealt_ranged": "+%s ranged damage",
+  "info.zetcraft.damage_taken_all": "+%s damage taken",
+  "info.zetcraft.damage_taken_melee": "+%s melee damage taken",
+  "info.zetcraft.damage_taken_ranged": "+%s ranged damage taken",
+  "info.zetcraft.minus_damage_dealt_all": "-%s damage dealt",
+  "info.zetcraft.minus_damage_dealt_melee": "-%s melee damage",
+  "info.zetcraft.minus_damage_dealt_ranged": "-%s ranged damage",
+  "info.zetcraft.minus_damage_taken_all": "-%s damage taken",
+  "info.zetcraft.minus_damage_taken_melee": "-%s melee damage taken",
+  "info.zetcraft.minus_damage_taken_ranged": "-%s ranged damage taken",
+  "info.zetcraft.percentage_points": "percentage points",
+  "info.zetcraft.mob_xp_bonus": "+%s XP from slain mobs",
+  "info.zetcraft.emerald_chance": "+%s chance for slain mobs to drop an emerald",
+  "info.zetcraft.dmg_per_level": "+1 damage dealt for every %s levels of XP held",
+  "info.zetcraft.def_per_level": "+1 armor for every %s levels of XP held",
+  "info.zetcraft.dodge_chance": "+%s chance to nullify incoming damage"
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "x_ingot",
+  "ingredients": [
+    {
+      "item": "zetcraft:x_block"
+    }
+  ],
+  "result": {
+    "item": "zetcraft:x_ingot",
+    "count": 9
+  }
+}

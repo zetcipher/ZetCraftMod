@@ -11,4 +11,10 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.ZET.get());
         }
     };
+    public static final CreativeModeTab ZC_EQUIPS = new CreativeModeTab("zetcraftequips") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.RISK_RING.get());
+        }
+    };
 }

@@ -1,5 +1,11 @@
 {
   "replace": false,
   "values": [
+    "zetcraft:x_ore",
+    "zetcraft:y_ore",
+    "zetcraft:z_ore",
+    "zetcraft:x_block",
+    "zetcraft:y_block",
+    "zetcraft:z_block"
   ]
 }

@@ -13,8 +13,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.zetcipher.zetcraft.config.ZetCraftClientConfigs;
-import net.zetcipher.zetcraft.config.ZetCraftCommonConfigs;
+import net.zetcipher.zetcraft.config.ZCClientConfig;
+import net.zetcipher.zetcraft.config.ZCCommonConfig;
+import net.zetcipher.zetcraft.config.ZCServerConfig;
 import net.zetcipher.zetcraft.init.ModBlocks;
 import net.zetcipher.zetcraft.init.ModItems;
 import net.zetcipher.zetcraft.init.ModPOIs;
@@ -52,8 +53,9 @@ public class ZetCraft
 
         eventBus.addListener(this::setup);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ZetCraftClientConfigs.SPEC, "zetcraft-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ZetCraftCommonConfigs.SPEC, "zetcraft-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ZCClientConfig.SPEC, "zetcraft-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ZCCommonConfig.SPEC, "zetcraft-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ZCServerConfig.SPEC, "zetcraft-server.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

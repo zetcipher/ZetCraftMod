@@ -17,7 +17,7 @@ import java.util.List;
 public class WearableItem extends Item {
 
     public WearableItem(Properties properties) {
-        super(properties.stacksTo(1).tab(ModCreativeModeTab.ZETCRAFT).rarity(Rarity.RARE).fireResistant());
+        super(properties.stacksTo(1).tab(ModCreativeModeTab.ZC_EQUIPS).rarity(Rarity.RARE).fireResistant());
     }
     public WearableItem() {
         this(new Properties());

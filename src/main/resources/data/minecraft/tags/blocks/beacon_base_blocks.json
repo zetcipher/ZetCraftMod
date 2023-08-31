@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "zetcraft:x_block",
+    "zetcraft:y_block",
+    "zetcraft:z_block"
+  ]
+}

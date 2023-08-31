@@ -1,11 +1,11 @@
 {
-	"sea_level": -32,
+	"sea_level": -260,
 	"disable_mob_generation": false,
 	"aquifers_enabled": true,
-	"ore_veins_enabled": false,
+	"ore_veins_enabled": true,
 	"legacy_random_source": false,
 	"default_block": {
-		"Name": "minecraft:deepslate"
+		"Name": "minecraft:stone"
 	},
 	"default_fluid": {
 		"Name": "minecraft:lava",
@@ -14,7 +14,7 @@
 		}
 	},
 	"noise": {
-		"min_y": -64,
+		"min_y": -288,
 		"height": 384,
 		"size_horizontal": 1,
 		"size_vertical": 1,
@@ -41,16 +41,53 @@
 		}
 	},
 	"noise_router": {
-		"barrier": 0,
-		"fluid_level_floodedness": 0,
-		"fluid_level_spread": 0,
-		"lava": 0,
-		"temperature": 0,
-		"vegetation": 0,
-		"continents": 0,
-		"erosion": 0,
-		"depth": 0,
-		"ridges": 0,
+		"barrier": {
+			"type": "minecraft:noise",
+			"noise": "minecraft:aquifer_barrier",
+			"xz_scale": 1,
+			"y_scale": 0.5
+		},
+		"fluid_level_floodedness": {
+			"type": "minecraft:noise",
+			"noise": "minecraft:aquifer_fluid_level_floodedness",
+			"xz_scale": 1,
+			"y_scale": 0.67
+		},
+		"fluid_level_spread": {
+			"type": "minecraft:noise",
+			"noise": "minecraft:aquifer_fluid_level_spread",
+			"xz_scale": 1,
+			"y_scale": 0.714285
+		},
+		"lava": {
+			"type": "minecraft:y_clamped_gradient",
+			"from_y": -288,
+			"to_y": -224,
+			"from_value": 1,
+			"to_value": 0
+		},
+		"temperature": {
+			"type": "minecraft:shifted_noise",
+			"noise": "minecraft:temperature",
+			"xz_scale": 0.25,
+			"y_scale": 0,
+			"shift_x": "minecraft:shift_x",
+			"shift_y": 0,
+			"shift_z": "minecraft:shift_z"
+		},
+		"vegetation": {
+			"type": "minecraft:shifted_noise",
+			"noise": "minecraft:vegetation",
+			"xz_scale": 0.25,
+			"y_scale": 0,
+			"shift_x": "minecraft:shift_x",
+			"shift_y": 0,
+			"shift_z": "minecraft:shift_z"
+		},
+		"continents": "minecraft:overworld/continents",
+		"erosion": "minecraft:overworld/erosion",
+		"depth": "minecraft:overworld/depth",
+		"ridges": "minecraft:overworld/ridges",
 		"initial_density_without_jaggedness": 0,
 		"final_density": {
 			"type": "minecraft:mul",
@@ -64,15 +101,15 @@
 							"type": "minecraft:add",
 							"argument1": {
 								"type": "minecraft:y_clamped_gradient",
-								"from_y": -64,
-								"to_y": 260,
+								"from_y": -288,
+								"to_y": 51,
 								"from_value": 1,
 								"to_value": 0
 							},
 							"argument2": {
 								"type": "minecraft:y_clamped_gradient",
-								"from_y": 320,
-								"to_y": 300,
+								"from_y": 92,
+								"to_y": 80,
 								"from_value": 1,
 								"to_value": 0
 							}
@@ -94,9 +131,9 @@
 							"type": "minecraft:mul",
 							"argument1": {
 								"type": "minecraft:y_clamped_gradient",
-								"from_y": 300,
-								"to_y": 255,
-								"from_value": -0.5,
+								"from_y": 108,
+								"to_y": 47,
+								"from_value": -1,
 								"to_value": 0
 							},
 							"argument2": {
@@ -130,15 +167,15 @@
 							"type": "minecraft:add",
 							"argument1": {
 								"type": "minecraft:y_clamped_gradient",
-								"from_y": -64,
-								"to_y": -56,
+								"from_y": -288,
+								"to_y": -272,
 								"from_value": 1,
 								"to_value": -1
 							},
 							"argument2": {
 								"type": "minecraft:y_clamped_gradient",
-								"from_y": 256,
-								"to_y": 128,
+								"from_y": 46,
+								"to_y": -64,
 								"from_value": 1,
 								"to_value": -1
 							}
@@ -181,7 +218,23 @@
 							}
 						}
 					},
-					"argument2": 0
+					"argument2": {
+						"type": "minecraft:add",
+						"argument1": {
+							"type": "minecraft:y_clamped_gradient",
+							"from_y": -224,
+							"to_y": -364,
+							"from_value": 1.25,
+							"to_value": -1.25
+						},
+						"argument2": {
+							"type": "minecraft:y_clamped_gradient",
+							"from_y": -284,
+							"to_y": -272,
+							"from_value": 1.25,
+							"to_value": -1.25
+						}
+					}
 				}
 			},
 			"argument2": 1
@@ -231,6 +284,44 @@
 					"type": "minecraft:block",
 					"result_state": {
 						"Name": "minecraft:bedrock"
+					}
+				}
+			},
+			{
+				"type": "minecraft:condition",
+				"if_true": {
+					"type": "minecraft:vertical_gradient",
+					"random_name": "minecraft:deepslate",
+					"true_at_and_below": {
+						"above_bottom": 48
+					},
+					"false_at_and_above": {
+						"above_bottom": 64
+					}
+				},
+				"then_run": {
+					"type": "minecraft:block",
+					"result_state": {
+						"Name": "minecraft:blackstone"
+					}
+				}
+			},
+			{
+				"type": "minecraft:condition",
+				"if_true": {
+					"type": "minecraft:vertical_gradient",
+					"random_name": "minecraft:deepslate",
+					"true_at_and_below": {
+						"above_bottom": 256
+					},
+					"false_at_and_above": {
+						"above_bottom": 288
+					}
+				},
+				"then_run": {
+					"type": "minecraft:block",
+					"result_state": {
+						"Name": "minecraft:deepslate"
 					}
 				}
 			}

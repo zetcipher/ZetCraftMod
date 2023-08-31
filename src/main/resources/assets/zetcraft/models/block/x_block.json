@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "zetcraft:block/x_block_top",
+    "bottom": "zetcraft:block/x_block_bottom",
+    "side": "zetcraft:block/x_block_side"
+  }
+}

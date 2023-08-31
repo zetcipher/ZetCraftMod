@@ -117,7 +117,7 @@ public class ModTeleporter implements ITeleporter {
         }
 
         if (d0 == -1.0D) {
-            blockpos = (new BlockPos(pos.getX(), Mth.clamp(pos.getY(), 260, this.level.getHeight() - 10), pos.getZ())).immutable();
+            blockpos = (new BlockPos(pos.getX(), Mth.clamp(pos.getY(), 64, this.level.getHeight() - 10), pos.getZ())).immutable();
             Direction direction1 = direction.getClockWise();
             if (!worldborder.isWithinBounds(blockpos)) {
                 return Optional.empty();
@@ -215,7 +215,7 @@ public class ModTeleporter implements ITeleporter {
         }
         else {
             Direction.Axis portalAxis = this.level.getBlockState(entity.portalEntrancePos).getOptionalValue(CavePortalBlock.AXIS).orElse(Direction.Axis.X);
-            if (this.level.dimension() == ModDimensions.DEEPCAVERNDIM_KEY) {pos = pos.atY(260);}
+            if (this.level.dimension() == ModDimensions.DEEPCAVERNDIM_KEY) {pos = pos.atY(64);}
             return this.makePortal(pos, portalAxis);
         }
     }

@@ -14,13 +14,12 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.portal.PortalForcer;
 import net.minecraft.world.level.portal.PortalShape;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.zetcipher.zetcraft.ZetCraft;
 import net.zetcipher.zetcraft.block.CavePortalBlock;
-import net.zetcipher.zetcraft.config.ZetCraftCommonConfigs;
+import net.zetcipher.zetcraft.config.ZCServerConfig;
 import net.zetcipher.zetcraft.init.ModBlocks;
 import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 import net.zetcipher.zetcraft.world.dimension.ModDimensions;
@@ -38,7 +37,7 @@ public class GateKeyItem extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        if (ZetCraftCommonConfigs.CAVE_NETHER_PORTAL_SWAP.get()) {
+        if (ZCServerConfig.CAVE_NETHER_PORTAL_SWAP.get()) {
             if (context.getPlayer().level.dimension() == Level.NETHER || context.getPlayer().level.dimension() == Level.OVERWORLD) {
                 for (Direction direction : Direction.Plane.VERTICAL) {
                     BlockPos framePos = context.getClickedPos().relative(direction);
