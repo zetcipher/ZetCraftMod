@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.item.wearable;
+package net.zetcipher.zetcraft.item.wearable.necklace;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -15,8 +15,8 @@ import net.zetcipher.zetcraft.init.ModCreativeModeTab;
 
 import java.util.List;
 
-public class PowerRushItem extends Item {
-    public PowerRushItem() {
+public class EnderPearlPendantItem extends Item {
+    public EnderPearlPendantItem() {
         super(new Properties()
                 .tab(ModCreativeModeTab.ZC_EQUIPS)
                 .stacksTo(1)
@@ -27,8 +27,9 @@ public class PowerRushItem extends Item {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flags) {
-        float dmgBonus = ZCServerConfig.POWER_RUSH_DMG_BONUS.get();
-        tooltip.add(new TranslatableComponent("info.zetcraft.danger_condition").withStyle(ChatFormatting.GOLD));
-        tooltip.add(new TranslatableComponent("info.zetcraft.damage_dealt_all", dmgBonus).withStyle(ChatFormatting.BLUE));
+        int dodgeChance = (int) (ZCServerConfig.ENDER_PEARL_PENDANT_DODGE_CHANCE_BONUS.get() * 100);
+        String dodgeChanceString = String.valueOf(dodgeChance) + "%";
+        tooltip.add(new TranslatableComponent("info.zetcraft.dodge_chance", dodgeChanceString).withStyle(ChatFormatting.BLUE));
+        tooltip.add(new TranslatableComponent("tooltip." + stack.getItem().getRegistryName().toString()).withStyle(ChatFormatting.GRAY));
     }
 }

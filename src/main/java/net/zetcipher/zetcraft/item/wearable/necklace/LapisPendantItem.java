@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.item.wearable;
+package net.zetcipher.zetcraft.item.wearable.necklace;
 
 import com.google.common.collect.Multimap;
 import net.minecraft.resources.ResourceLocation;

@@ -1,4 +1,4 @@
-package net.zetcipher.zetcraft.item.wearable;
+package net.zetcipher.zetcraft.item.wearable.charm;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
